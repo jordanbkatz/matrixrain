@@ -1,0 +1,91 @@
+$accent: rgb(0, 255, 0);
+* {
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: helvetica;
+}
+.container {
+    canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    .settings {
+        width: 350px;
+        padding: 30px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 5px;
+        .field {
+            width: 100%;
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            label {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            input {
+                width: 100%;
+                height: 50px;
+                padding: 15px;
+                font-size: 16px;
+                text-align: center;
+                outline: none;
+                border: 1px solid lightgrey;
+                border-radius: 5px;
+                transition: all 200ms linear;
+                &:focus {
+                    border-color: $accent;
+                }
+            }
+            .checkbox {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                background-color: lightgrey;
+                outline: none;
+                border: 10px solid lightgrey;
+                transition: all 200ms linear;
+                &:hover {
+                    background-color: $accent;
+                }
+                &-checked {
+                    border-width: 10px;
+                    background-color: $accent;
+                }
+            }
+        }
+    }
+    .btn {
+        position: absolute;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        outline: none;
+        border: none;
+        transition: all 200ms linear;
+        &:hover {
+            color: $accent;
+        }
+        &-settings {
+            top: 15px;
+        }
+        &-repo {
+            top: 80px;
+        }
+    }
+}
