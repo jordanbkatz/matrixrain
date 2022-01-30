@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BsGearFill, BsX, BsGithub } from 'react-icons/bs';
+import { BsGearFill, BsX, BsGithub, BsCheck } from 'react-icons/bs';
+import { colorToText } from './functions';
 import MatrixRain from './models/MatrixRain';
 export default class App extends Component {
   constructor(props) {
@@ -63,15 +64,17 @@ export default class App extends Component {
               )}
               <div className="field">
                 <label>random</label>
-                <button className={"checkbox" + ((this.state.settings.random) ? " checkbox-checked" : "")} onClick={() => this.setState((state) => {
+                <button className="checkbox" onClick={() => this.setState((state) => {
                   state.settings.random = !state.settings.random;
                   state.matrixRain.randomColors = state.settings.random;
                   return { settings: state.settings, matrixRain: state.matrixRain };
-                })}></button>
+                })}>{
+                  this.state.settings.random ? <BsCheck size="40" color={colorToText(0, 255, 0)} /> : null
+                }</button>
               </div>
             </div>
             <button onClick={() => this.toggleSettings()} className="btn btn-settings">
-              <BsX size="30" />
+              <BsX size="40" />
             </button>
           </>
           :

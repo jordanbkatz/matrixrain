@@ -41,7 +41,7 @@ $accent: rgb(0, 255, 0);
                 font-size: 16px;
                 text-align: center;
                 outline: none;
-                border: 1px solid lightgrey;
+                border: 1px solid grey;
                 border-radius: 5px;
                 transition: all 200ms linear;
                 &:focus {
@@ -51,17 +51,16 @@ $accent: rgb(0, 255, 0);
             .checkbox {
                 width: 50px;
                 height: 50px;
-                border-radius: 100%;
-                background-color: lightgrey;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                background-color: white;
                 outline: none;
-                border: 10px solid lightgrey;
+                border: 1px solid grey;
                 transition: all 200ms linear;
                 &:hover {
-                    background-color: $accent;
-                }
-                &-checked {
-                    border-width: 10px;
-                    background-color: $accent;
+                    border-color: $accent;
                 }
             }
         }

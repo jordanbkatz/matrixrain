@@ -56,7 +56,7 @@
   font-size: 16px;
   text-align: center;
   outline: none;
-  border: 1px solid lightgrey;
+  border: 1px solid grey;
   border-radius: 5px;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
@@ -69,21 +69,25 @@
 .container .settings .field .checkbox {
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  background-color: lightgrey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 5px;
+  background-color: white;
   outline: none;
-  border: 10px solid lightgrey;
+  border: 1px solid grey;
   -webkit-transition: all 200ms linear;
   transition: all 200ms linear;
 }
 
 .container .settings .field .checkbox:hover {
-  background-color: lime;
-}
-
-.container .settings .field .checkbox-checked {
-  border-width: 10px;
-  background-color: lime;
+  border-color: lime;
 }
 
 .container .btn {
