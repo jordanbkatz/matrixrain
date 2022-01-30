@@ -33,8 +33,8 @@ export default class MatrixRain {
 		for (let i = 0; i < MatrixRain.flowRate; i++) {
 			column = random(0, this.columns);
 			available = true;
-			for (let i = 0; i < this.strands.length; i++) {
-				if (this.strands[i].pos.x === column * Char.width && this.strands[i].pos.y <= this.canvas.height) {
+			for (let j = 0; j < this.strands.length; j++) {
+				if (this.strands[j].pos.x === column * Char.width && this.strands[j].pos.y <= this.canvas.height) {
 					available = false;
 				}
 			}
