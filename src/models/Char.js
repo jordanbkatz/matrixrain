@@ -1,4 +1,4 @@
-import { random, colorToText } from '../functions';
+import { random, colorToText } from '../utils/functions';
 import Entity from './Entity';
 export default class Char extends Entity {
 	static size = 20;

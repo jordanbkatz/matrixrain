@@ -1,4 +1,4 @@
-import { random, colorToText } from '../functions';
+import { random, colorToText } from '../utils/functions';
 import Entity from './Entity';
 import Char from './Char';
 import Strand from './Strand';

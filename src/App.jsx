@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BsGearFill, BsX, BsGithub, BsCheck } from 'react-icons/bs';
-import { colorToText } from './functions';
+import { colorToText } from './utils/functions';
 import MatrixRain from './models/MatrixRain';
 export default class App extends Component {
   constructor(props) {
