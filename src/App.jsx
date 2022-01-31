@@ -54,9 +54,9 @@ export default class App extends Component {
                   <label key={`l-${color}`}>{color}</label>
                   <input type="text" value={this.state.settings[color]} key={`i-${color}`} onChange={(e) => this.setState((state) => {
                     if (e.target.value.match(/\D/) == null) {
-                      let val = parseInt(e.target.value) || 0;
+                      let val = Math.min(parseInt(e.target.value) || 0, 255);
                       state.settings[color] = val;
-                      state.matrixRain.color[color] = Math.min(Math.max(val, 0), 255);
+                      state.matrixRain.color[color] = Math.max(val, 0);
                       return { settings: state.settings, matrixRain: state.matrixRain };
                     }
                   })} />
